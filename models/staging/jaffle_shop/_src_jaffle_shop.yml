@@ -8,6 +8,16 @@ sources:
     tables:
       - name: customers
       - name: orders
+        config:
+          freshness:
+            warn_after:
+              count: 6
+              period: day
+            error_after:
+              count: 12
+              period: day
+          loaded_at_field: ORDER_DATE
+
   - name: stripe
     description: "raw data sources for stripe payments"
     database: dbt-learn-488118

@@ -5,4 +5,4 @@ select
             STATUS as status
     from {{ source('raw_data', 'orders') }}
 
-        -- from dbt-learn-488118.jaffle_shop.orders
+
