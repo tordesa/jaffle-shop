@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw_data
+    description: "raw data sources for jaffle_shop customers and orrders"
+    database: dbt-learn-488118
+    schema: jaffle_shop
+    tables:
+      - name: customers
+      - name: orders
+  - name: stripe
+    description: "raw data sources for stripe payments"
+    database: dbt-learn-488118
+    schema: stripe
+    tables:
+      - name: payments
